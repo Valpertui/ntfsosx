@@ -16,15 +16,9 @@ done < /etc/fstab
 }
 
 addLine(){
-	uuid=$(diskutil info "$FILENAME" | grep UUID | cut -d ':' -f2 | sed 's/^[ \t]*//')
 	volumeName=$(diskutil info "$FILENAME" | grep "Volume Name" | cut -d ':' -f2 | sed 's/^[ \t]*//' | sed 's/ /\\040/')
+	line="LABEL=$volumeName none ntfs rw,auto,nobrowse";
 	
-	if [ "$uuid" = "" ]; then
-		line="LABEL=\"$volumeName\" none ntfs rw,auto,nobrowse";
-	else
-		line="UUID=\"$uuid\" none ntfs rw,auto,nobrowse";
-	fi
-
 	checkExisting;
 	echo "# New NTFS HD: $volumeName on $(date) " >> /etc/fstab
 	echo $line >> /etc/fstab
