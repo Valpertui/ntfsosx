@@ -30,7 +30,7 @@ Will open a Finder window for the device
 
 * If you want to eject the disk properly
 ~~~
-diskutils eject /Volumes/DeviceName
+diskutil eject /Volumes/DeviceName
 ~~~
 
 * To create a symbolic link to it on the desktop :
