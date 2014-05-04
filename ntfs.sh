@@ -52,7 +52,6 @@ if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     exit
 fi
 echo "___________________________________"
-echo "RubeniumTB. 2013 --rubenium(at)hotmail.com--"
 echo ""
 echo "Initialize a NTFS Hard Disk on this system to read and write" 
 echo "Next time you won't need to initialize it again. Just plug and open"
