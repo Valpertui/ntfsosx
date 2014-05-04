@@ -33,6 +33,7 @@ Will open a Finder window for the device
 diskutils eject /Volumes/DeviceName
 ~~~
 
-* You can create a symbolic link to it on the desktop by doing : `ln -s /Volumes/DeviceName ~/Desktop/DeviceName`
+* You can create a symbolic link to it on the desktop by doing :
+  `ln -s /Volumes/DeviceName ~/Desktop/DeviceName`
 * If you want to remove the symlink : `rm -f ~/Desktop/DeviceName`
 * If you want to remove ntfs support : `sudo rm -f /etc/fstab`
